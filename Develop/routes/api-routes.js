@@ -17,7 +17,8 @@ module.exports = function(app) {
     db.User.create({
       firstName: req.body.firstName,
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      // city: req.body.city
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -47,5 +48,66 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
+  });
+
+
+  // GET route for getting all of the todos
+  app.get("/api/progresses/:id", function(req, res) {
+    // Write code here to retrieve all of the todos from the database and res.json them
+    // back to the user
+    db.Progress.findAll({
+      where: {
+        userId: req.params.id
+      }
+    }).then(function(result) {
+      res.json(result);
+    });
+  });
+
+  // POST route for saving a new todo. We can create todo with the data in req.body
+  app.post("/api/progresses", function(req, res) {
+    // Write code here to create a new todo and save it to the database
+    // and then res.json back the new todo to the user
+
+    //console.log("userID" . req.body.userId);
+    db.Progress.create({
+      water_goal: req.body.water_goal,
+      water_intake: req.body.water_intake,
+      UserId: req.body.userId
+      // water_intake: req.body.water_intake,
+    }).then(function(result) {
+      res.json(result);
+    }).catch(function (err) {
+      res.json(err);
+    });
+  });
+
+  // DELETE route for deleting todos. We can get the id of the todo to be deleted from
+  // req.params.id
+  app.delete("/api/progresses/:id", function(req, res) {
+    db.Progress.destroy({
+      where: {
+        id: req.params.id,
+      }
+    }).then(function(result) {
+      res.json(result);
+    })
+  });
+
+  // PUT route for updating todos. We can get the updated todo data from req.body
+  app.put("/api/progresses", function(req, res) {
+    db.Progress.update({
+      water_goal: req.body.water_goal,
+      water_intake: req.body.water_intake,
+    }, 
+    {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(result) {
+      res.json(result);
+    }).catch(function (err) {
+      res.json(err);
+    });
   });
 };
