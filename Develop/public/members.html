@@ -11,24 +11,82 @@
 
 <body>
   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+          Logout
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Welcome <span class="member-name"></span></h2>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <ul class="list-group progress-list">
+          <li class="list-group-item new-item">
+            <form id="progress-form">
+              <div class="row">
+                <div class="col-6">
+                  <p> Water Tracker</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                  <p class="goal">Goal:</p>
+                </div>
+                <div class="col-5">
+                  <input class="new-item form-control errors" placeholder="# of glasses" type="text" />
+                  <div class="error" style="color: red; font-size:10px"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                  <p class="actual">Actual:</p>
+                </div>
+                <div class="col-5">
+                  <input class="new-item2 form-control errors" placeholder="# of glasses" type="text" />
+                  <div class="error" style="color: red; font-size:10px"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <input type="hidden" value="" name="userId" id="userId">
+                  <button type="submit" class="btn submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </li>
+          <span class="progress-container">
+          </span>
+          <div class="row">
+            <div class="col-md-12">
+              <div style="padding: 1em;">
+                <div class="progress">
+                  <div id="progressbar" class="progress-bar progress-bar-striped active" style="width: 5%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="message"></div>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="js/view.js"></script>
 
 </body>
 

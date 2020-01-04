@@ -2,3 +2,64 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.progress-list {
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+input.new-item:focus {
+  outline: none;
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  float: right;
+  height: 25px;
+  margin-left: 5px;
+}
+
+.edit {
+  width: 100%;
+}
+
+.progress {
+  height: 30px;
+}
+
+.row {
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.goal, .actual {
+  font-size: 20px;
+}
+
+.submit {
+  background-color: #158CBA;
+  width: 40%;
+}
+
+.clear {
+  background-color: white;
+  color: #158CBA;
+}
+
+.G {
+  font-size: 15px;
+}
+
+.error {
+  margin-bottom: 10px;
+}
