@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Planner</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
@@ -25,6 +25,8 @@
         <h2>Welcome <span class="member-name"></span></h2>
       </div>
     </div>
+    <!-- Water Tracker HTML -->
+    <!-- ============================== -->
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
@@ -32,30 +34,32 @@
           <li class="list-group-item new-item">
             <form id="progress-form">
               <div class="row">
-                <div class="col-6">
+                <div class="col-md-12">
                   <p> Water Tracker</p>
                 </div>
               </div>
               <div class="row">
-                <div class="col-1">
+                <div class="col-md-2">
                   <p class="goal">Goal:</p>
                 </div>
-                <div class="col-5">
+                <div class="col-md-9">
                   <input class="new-item form-control errors" placeholder="# of glasses" type="text" />
                   <div class="error" style="color: red; font-size:10px"></div>
                 </div>
+                <div class="col-md-1"></div>
               </div>
               <div class="row">
-                <div class="col-1">
+                <div class="col-md-2">
                   <p class="actual">Actual:</p>
                 </div>
-                <div class="col-5">
+                <div class="col-md-9">
                   <input class="new-item2 form-control errors" placeholder="# of glasses" type="text" />
                   <div class="error" style="color: red; font-size:10px"></div>
                 </div>
+                <div class="col-md-1"></div>
               </div>
               <div class="row">
-                <div class="col-12">
+                <div class="col-md-12">
                   <input type="hidden" value="" name="userId" id="userId">
                   <button type="submit" class="btn submit">Submit</button>
                 </div>
@@ -68,7 +72,7 @@
             <div class="col-md-12">
               <div style="padding: 1em;">
                 <div class="progress">
-                  <div id="progressbar" class="progress-bar progress-bar-striped active" style="width: 5%"></div>
+                  <div id="progressbar" class="progress-bar progress-bar-striped" style="width: 5%"></div>
                 </div>
               </div>
             </div>
@@ -82,6 +86,8 @@
       </div>
       <div class="col-md-2"></div>
     </div>
+    <!-- ============================== -->
+    <!-- End of Water Tracker HTML -->
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
