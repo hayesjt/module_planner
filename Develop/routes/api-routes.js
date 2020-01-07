@@ -17,8 +17,8 @@ module.exports = function(app) {
     db.User.create({
       firstName: req.body.firstName,
       email: req.body.email,
+      city: req.body.city,
       password: req.body.password,
-      // city: req.body.city
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -45,6 +45,7 @@ module.exports = function(app) {
       res.json({
         firstName: req.user.firstName,
         email: req.user.email,
+        city: req.user.city,
         id: req.user.id
       });
     }

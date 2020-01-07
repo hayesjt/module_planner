@@ -63,3 +63,20 @@ input {
 .error {
   margin-bottom: 10px;
 }
+
+/* weather */
+.weather-div {
+  margin-top:15px;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  width: 750px;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.weather-title {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.weather-btn {
+  margin-bottom: 10px;
+}
+/* End weather */
