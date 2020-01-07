@@ -51,10 +51,10 @@ module.exports = function(app) {
   });
 
 
-  // GET route for getting all of the todos
+  //WATER TRACKER API ROUTES
+  //================================================
+  // GET route for getting all of the water progress
   app.get("/api/progresses/:id", function(req, res) {
-    // Write code here to retrieve all of the todos from the database and res.json them
-    // back to the user
     db.Progress.findAll({
       where: {
         userId: req.params.id
@@ -64,17 +64,12 @@ module.exports = function(app) {
     });
   });
 
-  // POST route for saving a new todo. We can create todo with the data in req.body
+  // POST route for saving a new progress point. We can create progress point with the data in req.body
   app.post("/api/progresses", function(req, res) {
-    // Write code here to create a new todo and save it to the database
-    // and then res.json back the new todo to the user
-
-    //console.log("userID" . req.body.userId);
     db.Progress.create({
       water_goal: req.body.water_goal,
       water_intake: req.body.water_intake,
       UserId: req.body.userId
-      // water_intake: req.body.water_intake,
     }).then(function(result) {
       res.json(result);
     }).catch(function (err) {
@@ -82,8 +77,7 @@ module.exports = function(app) {
     });
   });
 
-  // DELETE route for deleting todos. We can get the id of the todo to be deleted from
-  // req.params.id
+  // DELETE route for deleting progress points. We can get the id of the todo to be deleted from req.params.id
   app.delete("/api/progresses/:id", function(req, res) {
     db.Progress.destroy({
       where: {
@@ -94,7 +88,7 @@ module.exports = function(app) {
     })
   });
 
-  // PUT route for updating todos. We can get the updated todo data from req.body
+  // PUT route for updating progress points. We can get the updated todo data from req.body
   app.put("/api/progresses", function(req, res) {
     db.Progress.update({
       water_goal: req.body.water_goal,
@@ -111,3 +105,4 @@ module.exports = function(app) {
     });
   });
 };
+//================================================
