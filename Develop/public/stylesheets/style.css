@@ -80,3 +80,47 @@ input {
   margin-bottom: 10px;
 }
 /* End weather */
+
+
+/* todo */
+body {
+  color: #555555;
+}
+
+
+.todo-list {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+input.new-item:focus {
+  outline: none;
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  float: right;
+  height: 25px;
+  margin-left: 5px;
+}
+
+.edit {
+  width: 100%;
+}
+
+#todo-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.btn-success {
+  background-color: #138cba;
+  border-color: #138cba;
+}
+
+.btn-success:hover {
+  background-color: #138cba;
+  border-color: #138cba;
+}
+/* End todo */
