@@ -4,6 +4,7 @@ $(document).ready(function() {
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.firstName);
     $("#userId").val(data.id);
+    $(".city-name").val(data.city);
     console.log("val:");  
     console.log(data.id);
   });
