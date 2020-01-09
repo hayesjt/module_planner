@@ -141,6 +141,7 @@ module.exports = function (app) {
 
   // POST route for saving a new progress point. We can create progress point with the data in req.body
   app.post("/api/progresses", function (req, res) {
+    console.log( req.body);
     db.Progress.create({
       water_goal: req.body.water_goal,
       water_intake: req.body.water_intake,

@@ -1,11 +1,14 @@
 $(document).ready(function () {
-  // Getting a reference to the input field where user adds a new todo
-  var $newItemInput = $("input.new-item");
+  // Getting a reference to the input field where user adds a new Goal and Actual
+  var $newItemInput = $("#goal");
   var $newItemInput2 = $("input.new-item2");
+
+  var waterForm = $(".water-form");
+
   // Our new progress points will go inside the progressContainer
   var $progressContainer = $(".progress-container");
   // Adding event listeners for deleting, editing, and adding todos
-  $(document).on("click", "button.delete", deleteProgress);
+  $(document).on("click", "button.destroy", deleteProgress);
   $(document).on("click", ".progress-item", editProgress);
   $(document).on("keyup", ".progress-item", finishEdit);
   $(document).on("blur", ".progress-item", cancelEdit);
@@ -42,7 +45,18 @@ $(document).ready(function () {
   // This function deletes a progress point when the user clicks the delete button
   function deleteProgress(event) {
     event.stopPropagation();
+
+    //Bring back the form fields
+    waterForm.attr("class", "water-form");
+    $newItemInput.val("");
+    $newItemInput2.val("");
+
+    //Reduce the progress bar to it's starting point
+    $("#progressbar").css("width", "5%");
+
+    //Delete from database
     var id = $(this).data("id");
+    console.log(this);
     $.ajax({
       method: "DELETE",
       url: "/api/progresses/" + id
@@ -99,11 +113,11 @@ $(document).ready(function () {
         "<class='G'> Goal: " + progress.water_goal + " " + "Actual: " + progress.water_intake,
         "</span>",
         "<input type='text' class='edit' style='display: none;'>",
-        "<button class='delete btn clear'>Clear</button>",
+        "<button class='destroy btn clear'>Clear</button>",
         "</li>"
       ].join("")
     );
-    $newInputRow.find("button.delete").data("id", progress.id);
+    $newInputRow.find("button.destroy").data("id", progress.id);
     $newInputRow.find("input.edit").css("display", "none");
     $newInputRow.data("progress", progress);
     if (progress.complete) {
@@ -129,26 +143,21 @@ $(document).ready(function () {
       data: progress,
       async: false,
       success: function (data, textStatus, jqXHR) {
-
-
+        
         if (data.errors) {
-          //if errors returned use first in message
+          //if errors returned use first message
           $(".errors").css("border", "1px solid red");
           $(".error").html(data.errors[0].message);
         }
         else {
           getProgress();
-          $newItemInput.val("");
-          $newItemInput2.val("");
-          $(".errors").css("border", "1px solid #555");
-          $(".error").html("");
-          console.log(progress);
+          waterForm.attr("class", "remove");
         }
       }
-
     });
   }
 
+  //The progress bar moves based on the actual to goal %
   function progressBar() {
     $.get("/api/user_data").then(function (data) {
       var id = data.id;
@@ -157,10 +166,9 @@ $(document).ready(function () {
         for (var i = 0; i < data.length; i++) {
           var goal = data[i].water_goal;
           var actual = data[i].water_intake;
-          console.log(data);
         }
 
-
+        //Calculating % to goal
         $("#progressbar").css("width", Math.round(100 * actual / goal) + "%");
         console.log(100 * actual / goal)
         if (Math.round(100 * actual / goal) >= 100) {

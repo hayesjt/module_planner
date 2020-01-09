@@ -1,3 +1,4 @@
+/* water */
 form.signup,
 form.login {
   margin-top: 50px;
@@ -12,8 +13,7 @@ input.new-item:focus {
   outline: none;
 }
 
-.list-group-item > button.delete,
-.list-group-item > button.complete {
+.list-group-item > button.destroy {
   float: right;
   height: 25px;
   margin-left: 5px;
@@ -63,6 +63,16 @@ input {
 .error {
   margin-bottom: 10px;
 }
+
+.remove {
+  display: none;
+}
+
+#currentDay {
+  font-size: 45px;
+  font-weight: bold;
+}
+/* end water */
 
 /* weather */
 .weather-div {

@@ -127,7 +127,7 @@ $(document).ready(function () {
         event.preventDefault();
         var todo = {
           text: $newItemInput.val().trim(),
-          userId: $("#userId").val().trim(),
+          userId: $("#userIdTodo").val().trim(),
           complete: false
         };
 
