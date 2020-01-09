@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,16 +40,21 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
+        <p id="currentDay" class="lead"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
         <h2>Welcome <span class="member-name"></span></h2>
       </div>
     </div>
 
-    <!--Weather Start-->
+    <!--Weather HTML-->
     <!-- ============================== -->
     <div class="weather-div">
       <div class="row">
         <div class="col-md-12">
-          <h5 class="weather-title">Weather Dashboard</h5>
+          <h5 class="weather-title">Weather</h5>
         </div>
       </div>
       <div class="row">
@@ -71,7 +76,7 @@
       </div>
     </div>
     <!-- ============================== -->
-    <!--End Weather-->
+    <!--End Weather HTML-->
 
     <!-- To Do HTML -->
     <!-- ============================== -->
@@ -90,7 +95,7 @@
                   <div class="error" style="color:red; font-size:10px"></div>
                 </div>
                 <div class="col-2">
-                  <input type="hidden" value="" name="userId" id="userId">
+                  <input type="hidden" value="" name="userId" id="userIdTodo">
                   <button type="submit" class="btn btn-success">Submit</button>
                 </div>
               </div>
@@ -111,18 +116,18 @@
       <div class="col-md-8">
         <ul class="list-group progress-list">
           <li class="list-group-item new-item">
-            <form id="progress-form">
-              <div class="row">
-                <div class="col-md-12">
-                  <p> Water Tracker</p>
-                </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p> Water Tracker</p>
               </div>
+            </div>
+            <form id="progress-form" class="water-form">
               <div class="row">
                 <div class="col-md-2">
                   <p class="goal">Goal:</p>
                 </div>
                 <div class="col-md-9">
-                  <input class="new-item form-control errors" placeholder="# of glasses" type="text" />
+                  <input class="new-item form-control errors" id="goal" placeholder="# of glasses" type="text" />
                   <div class="error" style="color: red; font-size:10px"></div>
                 </div>
                 <div class="col-md-1"></div>
@@ -284,10 +289,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-  <script type="text/javascript" src="js/view.js"></script>
+  <script type="text/javascript" src="js/water.js"></script>
   <script type="text/javascript" src="js/weather.js"></script>
   <script src="js/todo.js" type="text/javascript"></script>
   <script src="js/budget.js"></script>
+  <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
 </body>
 
 </html>
