@@ -14,8 +14,8 @@
 <body>
   <!-- Nav Bar Start -->
   <!-- ============================== -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">MODULE PLANNER</a>
+  <nav class="navbar navbar-expand-lg">
+    <p class="navbar-brand" >MODULE PLANNER</p>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,24 +28,27 @@
         <li class="nav-item">
           <a class="nav-link" href="/About">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav-logout">
           <a class="nav-link" href="/logout">Logout</a>
         </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li id="currentDay" class="todays-date"></li>
       </ul>
     </div>
   </nav>
   <!-- ============================== -->
   <!-- Nav Bar End -->
-
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <p id="currentDay" class="lead"></p>
+      <div class="col-md-2">
+        <!-- empty - margin -->
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 welcome-div">
         <h2>Welcome <span class="member-name"></span></h2>
+      </div>
+      <div class="col-md-2">
+        <!-- empty  margin -->
       </div>
     </div>
 
