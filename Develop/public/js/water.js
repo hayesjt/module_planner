@@ -110,7 +110,7 @@ $(document).ready(function () {
       [
         "<li class='list-group-item progress-item'>",
         "<span>",
-        "<class='G'> Goal: " + progress.water_goal + " " + "Actual: " + progress.water_intake,
+        "<class='G'> Goal: " + progress.water_goal + "   " + "Actual: " + progress.water_intake,
         "</span>",
         "<input type='text' class='edit' style='display: none;'>",
         "<button class='destroy btn clear'>Clear</button>",
