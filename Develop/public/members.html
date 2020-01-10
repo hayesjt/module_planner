@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
@@ -15,7 +15,7 @@
   <!-- Nav Bar Start -->
   <!-- ============================== -->
   <nav class="navbar navbar-expand-lg">
-    <p class="navbar-brand" >MODULE PLANNER</p>
+    <p class="navbar-brand">MODULE PLANNER</p>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,194 +40,214 @@
   <!-- ============================== -->
   <!-- Nav Bar End -->
   <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <!-- empty - margin -->
-      </div>
-      <div class="col-md-8 welcome-div">
-        <h2>Welcome <span class="member-name"></span></h2>
-      </div>
-      <div class="col-md-2">
-        <!-- empty  margin -->
-      </div>
-    </div>
-
-    <!--Weather HTML-->
-    <!-- ============================== -->
-    <div class="weather-div">
+    <div class="content-inside">
       <div class="row">
-        <div class="col-md-12">
-          <h5 class="weather-title">Weather</h5>
+        <div class="col-md-2">
+          <!-- empty - margin -->
+        </div>
+        <div class="col-md-8 welcome-div">
+          <h2>Welcome <span class="member-name"></span></h2>
+        </div>
+        <div class="col-md-2">
+          <!-- empty  margin -->
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 basic-weather-info">
-          <div class="city-name">Monticello</div>
-          <img class="current-img">some clouds</img>
-        </div>
-        <div class="col-md-6 specs">
-          <div class="current-temp">cold af</div>
-          <div class="current-Humidity">not very humid</div>
-          <div class="current-wind-speed">taad windy</div>
-          <div class="current-uv-index">idexy</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <button type="submit" class="btn weather-btn">Change city</button>
-        </div>
-      </div>
-    </div>
-    <!-- ============================== -->
-    <!--End Weather HTML-->
 
-    <!-- To Do HTML -->
-    <!-- ============================== -->
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <br>
-        <ul class="list-group todo-list">
-          <li class="list-group-item new-item">
-            <form id="todo-form">
-              <div class="col-md-8" id="todo-title">To-Do's</div>
-              <br><br>
-              <div class="row">
-                <div class="col-10">
-                  <input class="new-item form-control" id="todo" placeholder="Add a task" type="text" />
-                  <div class="error" style="color:red; font-size:10px"></div>
-                </div>
-                <div class="col-2">
-                  <input type="hidden" value="" name="userId" id="userIdTodo">
-                  <button type="submit" class="btn btn-success">Submit</button>
-                </div>
-              </div>
-              <br>
-            </form>
-          </li>
-          <span class="todo-container"></span>
-        </ul>
-      </div>
-    </div>
-    <!-- ============================== -->
-    <!--End To Do HTML-->
-
-    <!-- Water Tracker HTML -->
-    <!-- ============================== -->
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <ul class="list-group progress-list">
-          <li class="list-group-item new-item">
-            <div class="row">
-              <div class="col-md-12">
-                <p> Water Tracker</p>
-              </div>
+      <!--Weather HTML-->
+      <!-- ============================== -->
+      <div class="row">
+        <div class="col-md-2">
+          <!-- empty  margin -->
+        </div>
+        <div class="col-md-8 weather-div">
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="weather-title">Weather</h5>
             </div>
-            <form id="progress-form" class="water-form">
-              <div class="row">
-                <div class="col-md-2">
-                  <p class="goal">Goal:</p>
-                </div>
-                <div class="col-md-9">
-                  <input class="new-item form-control errors" id="goal" placeholder="# of glasses" type="text" />
-                  <div class="error" style="color: red; font-size:10px"></div>
-                </div>
-                <div class="col-md-1"></div>
-              </div>
-              <div class="row">
-                <div class="col-md-2">
-                  <p class="actual">Actual:</p>
-                </div>
-                <div class="col-md-9">
-                  <input class="new-item2 form-control errors" placeholder="# of glasses" type="text" />
-                  <div class="error" style="color: red; font-size:10px"></div>
-                </div>
-                <div class="col-md-1"></div>
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <!-- empty  margin -->
+            </div>
+            <div class="col-md-4 basic-weather-info">
+              <div class="city-name">Monticello</div>
+              <img class="current-img">some clouds</img>
+            </div>
+            <div class="col-md-4 specs">
+              <div class="current-temp">cold af</div>
+              <div class="current-Humidity">not very humid</div>
+              <div class="current-wind-speed">taad windy</div>
+              <div class="current-uv-index">idexy</div>
+            </div>
+            <div class="col-md-2">
+              <!-- empty  margin -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 change-city">
+              <button type="submit" class="btn weather-btn">Change city</button>
+            </div>
+          </div>
+        </div>
+        <div class="row col-md-1">
+          <!-- empty  margin -->
+        </div>
+      </div>
+      <!-- ============================== -->
+      <!--End Weather HTML-->
+
+      <!-- To Do HTML -->
+      <!-- ============================== -->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 task">
+          <ul class="list-group todo-list">
+            <li class="list-group-item new-item">
               <div class="row">
                 <div class="col-md-12">
-                  <input type="hidden" value="" name="userId" id="userId">
-                  <button type="submit" class="btn submit">Submit</button>
+                  <p id="todo-title"> To-Do's</p>
                 </div>
               </div>
-            </form>
-          </li>
-          <span class="progress-container">
-          </span>
-          <div class="row">
-            <div class="col-md-12">
-              <div style="padding: 1em;">
-                <div class="progress">
-                  <div id="progressbar" class="progress-bar progress-bar-striped" style="width: 5%"></div>
+              <form id="todo-form">
+                <div class="row">
+                  <div class="col-10">
+                    <input class="new-item form-control" id="todo" placeholder="Add a task" type="text" />
+                    <div class="error" style="color:red; font-size:10px"></div>
+                  </div>
+                  <div class="col-md-2">
+                    <input type="hidden" value="" name="userId" id="userIdTodo">
+                    <button type="submit" class="btn task-submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </li>
+            <span class="todo-container"></span>
+          </ul>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <!-- ============================== -->
+      <!--End To Do HTML-->
+
+      <!-- Water Tracker HTML -->
+      <!-- ============================== -->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 water">
+          <ul class="list-group progress-list">
+            <li class="list-group-item new-item">
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="water-title">Water Tracker</p>
+                </div>
+              </div>
+              <form id="progress-form" class="water-form">
+                <div class="row">
+                  <div class="col-md-2">
+                    <p class="goal">Goal:</p>
+                  </div>
+                  <div class="col-md-9">
+                    <input class="new-item form-control errors" id="goal" placeholder="# of glasses" type="text" />
+                    <div class="error" style="color: red; font-size:10px"></div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <p class="actual">Actual:</p>
+                  </div>
+                  <div class="col-md-9">
+                    <input class="new-item2 form-control errors" placeholder="# of glasses" type="text" />
+                    <div class="error" style="color: red; font-size:10px"></div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="hidden" value="" name="userId" id="userId">
+                    <button type="submit" class="btn submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </li>
+            <span class="progress-container">
+            </span>
+            <div class="row">
+              <div class="col-md-12">
+                <div style="padding: 1em;">
+                  <div class="progress">
+                    <div id="progressbar" class="progress-bar progress-bar-striped" style="width: 5%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="message"></div>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <!-- ============================== -->
+      <!-- End of Water Tracker HTML -->
+
+
+      <!--Budget HTML -->
+      <!-- ============================== -->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 budget-div">
+          <div class="top">
+            <div class="budget">
+              <div class="budget__title">
+                Available Budget in <span class="budget__title--month"></span>:
+              </div>
+
+              <div class="budget__value"></div>
+
+              <div class="budget__income clearfix">
+                <div class="budget__income--text">Income</div>
+                <div class="right">
+                  <div class="budget__income--value"></div>
+                  <div class="budget__income--percentage"></div>
+                </div>
+              </div>
+
+              <div class="budget__expenses clearfix">
+                <div class="budget__expenses--text">Expenses</div>
+                <div class="right clearfix">
+                  <div class="budget__expenses--value"></div>
+                  <div class="budget__expenses--percentage"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="message"></div>
+
+
+
+          <div class="bottom">
+            <div class="add">
+              <div class="add__container">
+                <select class="add__type">
+                  <option value="inc" selected>+</option>
+                  <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description" placeholder="Add description">
+                <input type="number" class="add__value" placeholder="Value">
+                <!-- <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button> -->
+                <button class="add__btn"><i class="far fa-check-square"></i></button>
+              </div>
             </div>
-          </div>
-        </ul>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
-    <!-- ============================== -->
-    <!-- End of Water Tracker HTML -->
 
+            <div class="container clearfix">
+              <div class="income">
+                <h2 class="icome__title">Income</h2>
 
-    <!--Budget HTML -->
-    <!-- ============================== -->
-    <div class="top">
-      <div class="budget">
-        <div class="budget__title">
-          Available Budget in <span class="budget__title--month"></span>:
-        </div>
+                <div class="income__list">
 
-        <div class="budget__value"></div>
-
-        <div class="budget__income clearfix">
-          <div class="budget__income--text">Income</div>
-          <div class="right">
-            <div class="budget__income--value"></div>
-            <div class="budget__income--percentage"></div>
-          </div>
-        </div>
-
-        <div class="budget__expenses clearfix">
-          <div class="budget__expenses--text">Expenses</div>
-          <div class="right clearfix">
-            <div class="budget__expenses--value"></div>
-            <div class="budget__expenses--percentage"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="bottom">
-      <div class="add">
-        <div class="add__container">
-          <select class="add__type">
-            <option value="inc" selected>+</option>
-            <option value="exp">-</option>
-          </select>
-          <input type="text" class="add__description" placeholder="Add description">
-          <input type="number" class="add__value" placeholder="Value">
-          <!-- <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button> -->
-          <button class="add__btn"><i class="far fa-check-square"></i></button>
-        </div>
-      </div>
-
-      <div class="container clearfix">
-        <div class="income">
-          <h2 class="icome__title">Income</h2>
-
-          <div class="income__list">
-
-            <!--
+                  <!--
                   <div class="item clearfix" id="income-0">
                       <div class="item__description">Salary</div>
                       <div class="right clearfix">
@@ -249,17 +269,17 @@
                   </div>
                   -->
 
-          </div>
-        </div>
+                </div>
+              </div>
 
 
 
-        <div class="expenses">
-          <h2 class="expenses__title">Expenses</h2>
+              <div class="expenses">
+                <h2 class="expenses__title">Expenses</h2>
 
-          <div class="expenses__list">
+                <div class="expenses__list">
 
-            <!--
+                  <!--
                   <div class="item clearfix" id="expense-0">
                       <div class="item__description">Apartment rent</div>
                       <div class="right clearfix">
@@ -282,13 +302,18 @@
                   </div>
                   -->
 
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- ============================== -->
+      <!-- End of Budget HTML -->
     </div>
-    <!-- ============================== -->
-    <!-- End of Budget HTML -->
   </div>
+
+  <footer class="footer">&copy Chicks with Clicks</footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>

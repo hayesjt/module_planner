@@ -1,7 +1,10 @@
 /* Body Styling */
-body {
+html body {
     font-family: 'Abel', sans-serif;
     background-image: url("../assets/images/floral.jpg");
+    background-position: center;
+    height: 100%;
+    margin: 0;
   }
   
   /* Nav Bar Styling */
@@ -25,6 +28,7 @@ body {
     font-size: 35px;
     float: right;
 }
+
 /* Planner Page Styling */
 .welcome-div {
     background-color: white;
@@ -32,5 +36,161 @@ body {
     border-radius: 10px;
     margin-top: 25px;
     text-align: center;
-    padding-top: 5px;
+    padding: 15px;
 }
+
+/* Weather */
+.weather-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.weather-div {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 15px;
+}
+
+.basic-weather-info, .specs {
+    text-align: left;
+}
+
+.city-name {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.weather-btn {
+    text-align: center;
+    width: 25%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* To Do */
+.task {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 20px;
+}
+#todo-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.weather-btn, .task-submit, .submit, .delete {
+    background-color: rgb(245,94,97);
+    color: white;
+    border: 1px solid lightgray;
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  float: right;
+  height: 30px;
+  margin-left: 5px;
+}
+
+/* Water */
+input.new-item:focus {
+    outline: none;
+  }
+
+.water {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 20px;
+}
+
+.water-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.submit {
+    text-align: center;
+    width: 25%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.list-group-item > button.destroy {
+    float: right;
+    height: 30px;
+    margin-left: 5px;
+    background-color: none;
+    color: rgb(245,94,97);
+    padding-top: 0px;
+}
+
+.remove {
+    display: none;
+}
+
+.progress {
+    height: 30px;
+  }
+
+  #progressbar {
+      background-color: rgb(245,94,97);
+  }
+
+  /* Budget */
+  .budget-div {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  .budget__title{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .icome__title, .expenses__title {
+      font-size: 20px;
+      text-align: left;
+  }
+
+  /* Footer */
+  .footer {
+    height: 50px;
+    margin-top: -50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(245,94,97);
+    padding-top: 15px;
+  }
+
+  .content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+
+  .container {
+    min-height: 100%;
+  }
+  
+/* .container {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 5px;
+
+} */

@@ -1,0 +1,73 @@
+html, body {
+    background-image: url("../assets/images/pink.jpg");
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    height: 100%;
+    margin:0;
+}
+
+  /* Nav Bar Styling */
+.navbar {
+    background-color: rgb(245,94,97);
+    height: 60px;
+}
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+.nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color:rgb(37, 37, 37);
+}
+
+/* Form Styling */
+.signup-header{
+    font-size: 35px;
+}
+
+.btn {
+    background-color:rgb(245,94,97);
+    color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(245,94,97);
+    border: 1px solid rgb(245,94,97);
+}
+
+/* Link Styling */
+.login-link:hover {
+    color: rgb(245,94,97);
+}
+
+.login-link {
+    color: black;
+    font-weight: bold;
+}
+
+ /* Footer */
+ .footer {
+    height: 50px;
+    margin-top: -50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(245,94,97);
+    padding-top: 15px;
+  }
+
+  .content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+
+  .container {
+    min-height: 100%;
+  }
