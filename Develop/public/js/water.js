@@ -177,7 +177,7 @@ $(document).ready(function () {
           $(".message").html("GOAL MET!");
         }
         else {
-          $("#progressbar").css("background-color", "#158CBA");
+          $("#progressbar").css("background-color", "rgb(245,94,97)");
           $(".message").html("");
         }
       });
