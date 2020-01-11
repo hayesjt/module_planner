@@ -15,8 +15,6 @@ What it does:
 
 ## Screenshots:
 
-Click to see the screenshots of the application.
-
 ![Login](public/assets/images/screenshot_login.png)
 
 
