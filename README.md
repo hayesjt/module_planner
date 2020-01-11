@@ -17,11 +17,11 @@ What it does:
 
 Click to see the screenshots of the application.
 
-- <a href="public/assets/images/screenshot_login.png">Login</a>
-- <a href="public/assets/images/screenshot_weather.png">Weather</a>
-- <a href="public/assets/images/todo.png">To-Do</a>
-- <a href="public/assets/images/water.png">Water Tracker</a>
-- <a href="public/assets/images/screenshot_budget.png">Budget</a>
+- ![Login](assets/images/screenshot_login.png)
+- ![Weather](assets/images/screenshot_weather.png)
+- ![To-Do](assets/images/screenshot_todo.png)
+- ![Water Tracker](assets/images/screenshot_water.png)
+- ![Budget](assets/images/screenshot_budget.png)
 
 ## Authors
 - [Ashley Wegwerth](https://github.com/Ashleyw27)
