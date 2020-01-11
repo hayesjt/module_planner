@@ -28,6 +28,3 @@ Click to see the screenshots of the application.
 - [Haylee Thomas-Kuhlman](https://github.com/haylee430)
 - [Ka Vang](https://github.com/ka-vang)
 - [Mai Xiong](https://github.com/maixiong29)
-
-
-please delete later - just testing changes to travis
