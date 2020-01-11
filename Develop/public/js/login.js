@@ -34,7 +34,10 @@ $(document).ready(function() {
         // If there's an error, log the error
       })
       .catch(function(err) {
-        console.log(err);
+        if (err) {
+          $(".error-login").html("Please enter a valid username or password");
+        }
+        // console.log(err);
       });
   }
 });
