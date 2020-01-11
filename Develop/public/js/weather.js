@@ -24,8 +24,8 @@ function getCurrentWeather() {
             var lat = response.coord.lat;
             $(".city-name").html(response.name);
             $(".current-img").attr("src", "https://api.openweathermap.org/img/w/" + response.weather[0].icon);
-            $(".current-temp").html("Current Temperature:" + " " + Math.round(response.main.temp) + "°");
-            $(".current-Humidity").html("Humidity:" + " " + response.main.humidity + "%");
+            $(".current-temp").html("Temperature:" + " " + Math.round(response.main.temp) + "°");
+            $(".current-Humidity").html("Humidity:" + "<br>" + response.main.humidity + "%");
             $(".current-wind-speed").html("Wind Speed:" + " " + response.wind.speed + "mph");
             setTimeout(function () {
                 getUv(lon, lat);
@@ -41,7 +41,7 @@ function getUv(index1, index2) {
         method: "GET"
     })
         .done(function (response) {
-            $(".current-uv-index").html("UV Index:" + " " + Math.round(response.value));
+            $(".current-uv-index").html("UV Index:" + "<br>" + Math.round(response.value));
         })
 }
 // calling function so this all runs when the page is loaded

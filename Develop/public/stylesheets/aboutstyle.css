@@ -35,6 +35,23 @@ img {
   filter: grayscale(100%);
 }
 
+/* Text content Styling */
+h6 {
+  font-weight: bold;
+}
+
+.social-link {
+  color: rgb(245,94,97);
+  padding-right:
+}
+
+.social-link:hover {
+  color:rgb(37, 37, 37);
+}
+
+.fullstack {
+  margin-top:10px;
+}
  /* Footer */
  .footer {
     height: 50px;

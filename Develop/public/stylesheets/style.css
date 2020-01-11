@@ -43,6 +43,7 @@ html body {
 .weather-title {
     font-size: 30px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .weather-div {
@@ -54,14 +55,26 @@ html body {
     padding: 15px;
 }
 
-.basic-weather-info, .specs {
-    text-align: left;
+.basic-weather-info {
+    margin-bottom: 15px;
 }
 
 .city-name {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 20px;
-    font-weight: bold;
+}
+
+.current-img {
+    height: 70px;
+    width: 70px;
+}
+
+.current-temp, .current-Humidity, .current-wind-speed, .current-uv-index {
+    background-color: lightgray;
+    border: 1px solid rgb(245,94,97);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 15px;
 }
 
 .weather-btn {
@@ -85,7 +98,7 @@ html body {
     text-align: center;
 }
 
-.weather-btn, .task-submit, .submit, .delete {
+.weather-btn, .task-submit, .submit, .delete, .complete {
     background-color: rgb(245,94,97);
     color: white;
     border: 1px solid lightgray;

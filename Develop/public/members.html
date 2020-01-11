@@ -22,12 +22,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/member">Your Planner</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
+        </li> -->
         <li class="nav-item nav-logout">
           <a class="nav-link" href="/logout">Logout</a>
         </li>
@@ -39,6 +36,10 @@
   </nav>
   <!-- ============================== -->
   <!-- Nav Bar End -->
+
+
+  <!-- Welcome "name" content -->
+  <!-- ============================== -->
   <div class="container">
     <div class="content-inside">
       <div class="row">
@@ -52,6 +53,8 @@
           <!-- empty  margin -->
         </div>
       </div>
+      <!-- ============================== -->
+      <!-- Welcome end -->
 
       <!--Weather HTML-->
       <!-- ============================== -->
@@ -69,18 +72,41 @@
             <div class="col-md-2">
               <!-- empty  margin -->
             </div>
-            <div class="col-md-4 basic-weather-info">
+            <div class="col-md-8 basic-weather-info">
               <div class="city-name">Monticello</div>
               <img class="current-img">some clouds</img>
             </div>
-            <div class="col-md-4 specs">
-              <div class="current-temp">cold af</div>
-              <div class="current-Humidity">not very humid</div>
-              <div class="current-wind-speed">taad windy</div>
-              <div class="current-uv-index">idexy</div>
-            </div>
             <div class="col-md-2">
               <!-- empty  margin -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <!-- empty  margin -->
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="current-temp">
+                    <!-- Shows current temp - pulling from API/weather.js -->
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="current-Humidity">
+                    <!-- Shows humidity temp - pulling from API/weather.js -->
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="current-wind-speed">
+                    <!-- Shows wind speed temp - pulling from API/weather.js -->
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="current-uv-index">
+                    <!-- Shows uv temp - pulling from API/weather.js -->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">
