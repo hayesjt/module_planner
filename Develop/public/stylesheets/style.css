@@ -93,9 +93,17 @@ html body {
 
 .list-group-item > button.delete,
 .list-group-item > button.complete {
+  border-radius: 5px;
   float: right;
   height: 30px;
   margin-left: 5px;
+}
+
+.fa-minus-circle:hover {
+    color: black;
+}
+.fa-check-circle:hover {
+    color: black;
 }
 
 /* Water */
@@ -141,9 +149,6 @@ input.new-item:focus {
     height: 30px;
   }
 
-  #progressbar {
-      background-color: rgb(245,94,97);
-  }
 
   /* Budget */
   .budget-div {

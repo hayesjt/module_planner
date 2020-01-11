@@ -107,8 +107,8 @@ $(document).ready(function () {
             todo.text,
             "</span>",
             "<input type='text' class='edit' style='display: none;'>",
-            "<button class='delete btn'>x</button>",
-            "<button class='complete btn' style='background-color: green; border-color: green;'>✓</button>",
+            "<button class='delete btn;'><i class='fas fa-minus-circle'></i></button>",
+            "<button class='complete btn;'><i class='fas fa-check-circle'></i></button>",
             "</li>"
           ].join("")
         );
