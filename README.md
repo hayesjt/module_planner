@@ -13,6 +13,8 @@ What it does:
 - All of these features are viewed on one page for increased productivity.
 - Information are stored on a database so you don't lose any data.
 
+Click here to try ['Module Planner'](https://moduleplanner2020.herokuapp.com/members)!
+
 ## Screenshots:
 
 ![Login](public/assets/images/screenshot_login.png)
