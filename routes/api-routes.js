@@ -186,10 +186,8 @@ module.exports = function (app) {
 
 //BUDGET API ROUTES
 //================================================
-app.get("/api/budgets/:id", function (req, res) {
-  // Write code here to retrieve all of the todos from the database and res.json them
-  // back to the user
-  db.Budgets.findAll({
+app.get("/api/budget/:id", function (req, res) {
+  db.Budget.findAll({
     where: {
       userId: req.params.id
     }
@@ -197,23 +195,65 @@ app.get("/api/budgets/:id", function (req, res) {
     res.json(result);
   });
 });
-app.post("/api/budgets", function (req, res) {
-  db.Budgets.create({
-    budget_value: req.body.budget,
-    totalInc: req.body.total.inc,
-    totalExp: req.body.totals.exp,
-    income_list: req.body.income,
-    expenses_list: req.body.expenses,
-    UserId: req.body.userId
 
+app.get("/api/income/:id", function (req, res) {
+  db.Income.findAll({
+    where: {
+      userId: req.params.id
+    }
+  }).then(function (result) {
+    res.json(result);
+  });
+});
+
+app.get("/api/expenses/:id", function (req, res) {
+  db.Expenses.findAll({
+    where: {
+      userId: req.params.id
+    }
+  }).then(function (result) {
+    res.json(result);
+  });
+});
+
+app.post("/api/budget", function (req, res) {
+  db.Budget.create({
+    budget: req.body.budget,
+    userId: req.body.userId
   }).then(function (result) {
     res.json(result);
   }).catch(function (err) {
     res.json(err);
   });
 });
-app.delete("/api/budgets/:id", function (req, res) {
-  db.Budgets.destroy({
+
+app.post("/api/income", function (req, res) {
+  db.Income.create({
+    description: req.body.description,
+    value: req.body.value,
+    userId: req.body.userId
+  }).then(function (result) {
+    res.json(result);
+  }).catch(function (err) {
+    res.json(err);
+  });
+});
+
+app.post("/api/expenses", function (req, res) {
+  db.Expenses.create({
+    description: req.body.description,
+    value: req.body.value,
+    userId: req.body.userId
+  }).then(function (result) {
+    res.json(result);
+  }).catch(function (err) {
+    res.json(err);
+  });
+});
+
+app.delete("/api/budget/:id", function (req, res) {
+  console.log(req)
+  db.Budget.destroy({
     where: {
       id: req.params.id,
     }
@@ -221,24 +261,26 @@ app.delete("/api/budgets/:id", function (req, res) {
     res.json(result);
   })
 });
-// PUT route for updating todos. We can get the updated todo data from req.body
-app.put("/api/budgets", function (req, res) {
-  db.Budgets.update({
-    budget_value: req.body.budget,
-    totalInc: req.body.total.inc,
-    totalExp: req.body.totals.exp,
-    income_list: req.body.income,
-    expenses_list: req.body.expenses
-  },
-    {
-      where: {
-        id: req.body.id
-      }
-    }).then(function (result) {
-      res.json(result);
-    }).catch(function (err) {
-      res.json(err);
-    });
+
+app.delete("/api/income/:id", function (req, res) {
+  console.log(req)
+  db.Income.destroy({
+    where: {
+      id: req.params.id,
+    }
+  }).then(function (result) {
+    res.json(result);
+  })
+});
+app.delete("/api/expenses/:id", function (req, res) {
+  console.log(req)
+  db.Expenses.destroy({
+    where: {
+      id: req.params.id,
+    }
+  }).then(function (result) {
+    res.json(result);
+  })
 });
 };
 //================================================
